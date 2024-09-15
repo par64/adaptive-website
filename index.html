@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adaptive-website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      @font-face {
+        font-family: "Open Sans";
+        src: url(fonts/OpenSans-VariableFont_wdth\wght.ttf) format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Блок `header`-->
+    <header class="header">
+      <!-- Логотип хедера -->
+      <div class="header__logo">
+        <img src="img/par64.png" alt="par64" />
+      </div>
+      <!-- Основное тело хедера -->
+      <div class="header__body">
+        <h1 class="header__title">Домашняя работа 1.8</h1>
+        <nav class="header__nav">
+          <!-- Независимый блок `списка меню`, можно использовать вне header-->
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
+            <li class="nav__item">
+              <a href="#implementer" class="nav__link">Выполнил</a>
+            </li>
+            <li class="nav__item">
+              <a href="#topic" class="nav__link">Тема</a>
+            </li>
+            <li class="nav__item">
+              <a href="#task" class="nav__link">Решение</a>
+            </li>
+            <li class="nav__item">
+              <a href="#examples" class="nav__link">Примеры</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Дополнительный блок хедара, для примера -->
+      <div class="header__search">
+        <form class="search-form search-form--focused">
+          <input class="search-form__input" />
+          <button class="search-form__button">Найти</button>
+        </form>
+      </div>
+    </header>
+    <!-- Блок основного контента -->
+    <main class="content">
+      <!-- Костыль, чтоб продемонстрировать грид -->
+      <div class="sidebar"></div>
+      <!-- Элемент блока основного контента - блок "задание" -->
+      <section class="content__task">
+        <div class="content__item">
+          <h2 class="content__item-title" id="implementer">Выполнил</h2>
+          <p class="content__item-text">
+            Участник программы профессиональной переподготовки по профессии
+            "web-разработчик" - <br />
+            Королев Дмитрий
+          </p>
+        </div>
+        <div class="content__item">
+          <h2 class="content__item-title" id="topic">Тема урока</h2>
+          <p class="content__item-text">Адаптивный web-сайт</p>
+        </div>
+        <div class="content__item">
+          <h2 class="content__item-title" id="task">Решение</h2>
+          <p class="content__item-text">
+            1.1 Создан новый проект с именем adaptive-website. Внутри проекта созданы файлы
+            index.html и styles.css, папка images для хранения изображений и папка fonts для хранения шрифтов..<br />
+            1.2 В index.html создана базовая структуру HTML-документа.<br /><br />
+            2.1 В styles.css стилизованя элементы страницы и подключены шрифты из папки fonts. 
+            С сайта Google Fonts скачан и добавлен на страницу шрифт "Open Sans"<br />
+            2.2 Подобраны и добавлены изображения, которые адаптируются под
+            размеры экрана. Установлены в качестве фоновой картинки тела страницы и адаптируются в css 
+            с помощью аналога srcset, функции image-set(). <br />
+            2.3  Добавлены медиа-запросы для изменения макета на разных устройствах. 
+            Создан адаптивный макет, который корректно отображается на мобильных устройствах и планшетах <br /><br />
+            3.1 В DevTools браузера страница протестирована на разных устройствах, проверена корректность загрузки шрифтов и изображений. 
+            Исправлены ошибки некорректного отображения страницы на каком-либо устройстве.<br />
+            3.2 В шапке страницы с помощью z-index меню навигации накладывается на логотип при уменьшении размеров окна браузера.<br /><br />
+            4.1 Создан репозиторий на GitHub, инициализирован локальный
+            репозиторий и связан с удалённым. Настроена публикация с ветки main.<br />
+            4.2 Внесено изменение в проект, опубликовано, проверено, что
+            изменения отобразились корректно.<br /><br />
+            5.1 Используя онлайн-генератор создан и установлен собственный favicon, отображается корректно.<br />
+            5.2 Добавлены элементы, которые демонстрируют центрирование контента и работу с переполнением.<br />
+            5.3 Отчет о кроссбраузерном тестировании:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; Первая трудность которая возникла, это использование srcset для вонового изображения. 
+            Так и не разобрался как его применить, поэтому воспользовался аналогичной функцией css.<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; При использовании элементов, со строго заданной шириной, превышающих ширину экранов мобильных устройств,
+            появляется полоса прокрутки, сдвигающая всю структуру страницы влево, включая шапку и подвал. Уменьшал ширину элемента, 
+            заведомо меньше ширины экранов мобильных устройств.<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; Для декстопного варианта страницы, решил закрепить шапку сайта, для удобной навигации по якорным ссылкам, 
+            при этом все ссылки съехали вверх на высоту шапки. Пришлось у якорных элементов, устанавливать падинг на высоту шапки 
+            и одновременно отрицательный маржин на эту же величину.
+          </p>
+        </div>
+      </section>
+      <!-- Элемент блока основного контента - блок "картинок" -->
+      <section class="content__gallery">
+        <div class="content__item">
+          <h2 class="content__item-title" id="examples">Примеры</h2>
+          <p class="content__item-text content__item-text--exampl">
+            .content__item-text {<br />
+            color: #0c2029;<br />
+            max-width: 800px;<br />
+            padding: 10px;<br />
+            }<br /><br />
+            .content__item-text--exampl {<br />
+            width: 400px;<br />
+            height: 300px;<br />
+            margin: 20px;<br />
+            background-color: cadetblue;<br />
+            overflow: auto;<br />
+            }<br /><br />
+
+            .gallery {<br />
+            text-align: center;<br />
+            width: 90%;<br />
+            }<br /><br />
+
+            .gallery-item {<br />
+            width: 100%;<br />
+            max-width: 300px;<br />
+            height: 250px;<br />
+            display: inline-block;<br />
+            margin: 5px;<br />
+            }<br /><br />
+
+            .gallery-item img {<br />
+            width: 100%;<br />
+            height: 100%;<br />
+            object-fit: cover;<br />
+            transition: 0.3s;<br />
+            }<br /><br />
+            .gallery-item img:hover {<br />
+            transform: scale(1.4);<br />
+            }<br />
+          </p>
+        </div>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="img/1.png" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/2.png" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/3.png" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text" id="contact">© 2024 training web-page Par64</p>
+    </footer>
+  </body>
+</html>
